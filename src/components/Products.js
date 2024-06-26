@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom"
+import { Link, Outlet } from "react-router-dom"
 
 export const Products = () => {
     return (
@@ -10,6 +10,7 @@ export const Products = () => {
                 <Link to='featured'>Featured</Link>
                 <Link to='new'>New</Link>
             </nav>
+            <Outlet />
         </>
     )
 }
