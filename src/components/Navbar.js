@@ -1,5 +1,6 @@
 // NavLink receives an active class when the link is the current route
 import { NavLink } from "react-router-dom"
+import { useAuth } from "./auth"
 
 export const Navbar = () => {
 
@@ -9,6 +10,8 @@ export const Navbar = () => {
             textDecoration: isActive ? 'none' : 'underline',
         }
     }
+
+    const auth = useAuth()
 
     return (
         <nav className='primary-nav'>            
@@ -24,6 +27,13 @@ export const Navbar = () => {
             <NavLink style={navLinkStyles} to='/profile'>
                 Profile
             </NavLink>
+            {
+                !auth.user && (
+                    <NavLink style={navLinkStyles} to='/login'>
+                        Login
+                    </NavLink>
+                )
+            }
         </nav>
     )
 }
