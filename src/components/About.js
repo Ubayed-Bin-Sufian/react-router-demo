@@ -1,4 +1,4 @@
-export const About = () => {
+const About = () => {
     return (
         <div>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer pretium enim eu finibus interdum. Donec et porttitor felis. In cursus, ex vitae ornare imperdiet, ex odio efficitur velit, ut scelerisque purus diam sed sem. Ut at purus gravida, ornare felis in, tincidunt urna. Aenean malesuada risus ut tempus ultricies. Quisque eros tellus, consequat a felis nec, convallis interdum felis. Donec a vehicula dolor, sed cursus eros. Donec tempus ante eget luctus condimentum. Sed at odio varius, malesuada dui ac, congue felis.
@@ -63,3 +63,5 @@ Aenean non varius dui. Suspendisse et risus arcu. Cras tristique augue magna, ut
         </div>
     )
 }
+
+export default About
