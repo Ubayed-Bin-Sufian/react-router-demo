@@ -1,4 +1,4 @@
-import { useState, createContext } from "react";
+import { useState, useContext, createContext, useContext } from "react";
 
 // within the file, AuthContext is created 
 const AuthContext = createContext(null)
@@ -20,8 +20,16 @@ export const AuthProvider = ({ children }) => {
     }
 
     // provide values using the AuthContext.Provider
-    return <AuthContext.Provider value={{user, login, logout}} >
-                {children}
-            </AuthContext.Provider>
+    return (
+        <AuthContext.Provider value={{user, login, logout}} >
+            {children}
+        </AuthContext.Provider>
+    )
 }
+
+    // define a function that returns AuthContext
+    export const useAuth = () => {
+        return useContext(AuthContext)
+    }
+
 
