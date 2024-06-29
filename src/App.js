@@ -11,6 +11,7 @@ import { NewProducts } from "./components/NewProducts";
 import { Users } from "./components/User";
 import { UserDetails } from "./components/UserDetails";
 import { Admin } from "./components/Admin";
+import { Profile } from "./components/Profile";
 
 const LazyAbout = React.lazy(() => import('./components/About'))
 
@@ -33,7 +34,8 @@ function App() {
         <Route path='users' element={<Users />}>
           <Route path=':userID' element={<UserDetails />} />
           <Route path='admin' element={<Admin />} />
-        </Route>        
+        </Route>
+        <Route path='profile' element={<Profile />} />      
         <Route path='*' element={<NoMatch />}/>        
       </Routes>
     </>
