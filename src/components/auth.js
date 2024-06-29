@@ -4,7 +4,7 @@ import { useState, createContext } from "react";
 const AuthContext = createContext(null)
 
 // Define AuthProvider component
-export const AuthProvider = () => {
+export const AuthProvider = ({ children }) => {
 
     // within the component, userState is maintained & define the functions to log in and log out
     const [user, setUser] = useState(null)
@@ -18,5 +18,10 @@ export const AuthProvider = () => {
     const logout = () => {
         setUser(null)
     }
+
+    // provide values using the AuthContext.Provider
+    return <AuthContext.Provider value={{user, login, logout}} >
+                {children}
+            </AuthContext.Provider>
 }
 
