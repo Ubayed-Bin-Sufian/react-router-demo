@@ -10,7 +10,7 @@ export const Login = () => {
     // define a function which call AuthContext
     const handleLogin = () => {
         auth.login(user)
-        navigate('/')
+        navigate('/', { replace: true })
     }
 
     return (
