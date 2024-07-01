@@ -1,4 +1,4 @@
-import { useState, useContext, createContext, useContext } from "react";
+import { useState, useContext, createContext } from "react";
 
 // within the file, AuthContext is created 
 const AuthContext = createContext(null)
